@@ -35,13 +35,10 @@ app.use((req, res, next) => {
 
 app.use("/api", routes);
 
-// app.use((req, res, next) => {
-//   res.send("Welcome to Express");
-// });
-
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
+
 app.listen(port, () => {
   console.log(`🌎 ==> Server running on port ${port}`);
 });
