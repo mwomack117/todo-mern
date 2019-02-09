@@ -7,9 +7,7 @@
     "start": "node server.js",
     "start-watch": "nodemon server.js",
     "dev": "concurrently \"yarn run start-watch\" \"cd client && yarn start\"",
-    "install": "cd client && yarn install",
-    "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "cd client && yarn && yarn run build"
   },
   "dependencies": {
     "dotenv": "^6.2.0",
